@@ -1,0 +1,8 @@
+<h3>Ajouter un ville</h3>
+<%= simple_form_for(@ville) do |ville| %>
+  <%= ville.input :name, placeholder: "Ex: Paris" %>
+  <%= ville.input :latitude %>
+  <%= ville.input :longitude %>
+  <%= ville.submit 'Ajouter', class: 'btn-add'%>
+<% end %>
+<a href='/villes'>Retour à la liste</a>
