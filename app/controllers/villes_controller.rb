@@ -14,7 +14,7 @@ class VillesController < ApplicationController
   def create
     @ville = Ville.new(ville_params)
     if @ville.save
-      redirect_to villes_path
+      redirect_to ville_path(@ville)
     end
   end
 
@@ -31,7 +31,7 @@ class VillesController < ApplicationController
   def destroy
     @ville = Ville.find(params[:id])
     @ville.destroy
-    redirect_to villes_path
+    redirect_to villes_path, status: :see_other
   end
 
   private
