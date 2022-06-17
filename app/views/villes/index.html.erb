@@ -1,9 +1,8 @@
-<h1>Villes</h1>
-<br>
+<h2>Villes</h2>
 <ol>
   <% @villes.each do |ville| %>
     <li><%= link_to ville.name, ville_path(ville) %></li>
   <% end %>
 </ol>
 <br>
-<a href='villes/new'>Ajouter une ville</a>
+<%= link_to "Ajouter une ville", new_ville_path %>
