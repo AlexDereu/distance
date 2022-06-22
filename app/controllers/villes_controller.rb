@@ -39,4 +39,5 @@ class VillesController < ApplicationController
   def ville_params
     params.require(:ville).permit(:name, :latitude, :longitude)
   end
+
 end
